@@ -25,8 +25,9 @@ public class Assessment_cartify {
 		driver.findElement(By.xpath("//span[contains(text(), 'Add to cart')]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@class='cart-popup__cta-link btn btn--secondary-accent']")).click();
-		String priceValue = driver.findElement(By.xpath("//span[text()='Regular price']")).getTagName();
+		String priceValue = driver.findElement(By.xpath("//span[text()='Rs.10,500.00 PKR']")).getText();
 		System.out.println("The subtotal price: "+priceValue);
+
 		driver.quit();
 
 	}
